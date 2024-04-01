@@ -1,0 +1,38 @@
+
+<head>
+    <title>Movie Registration</title>
+  </head>
+
+<html>
+  <body>
+    <h2 align="left"><font color="#FF0000">Add a Person</font></h2>
+    <form method = "post" action = "/Movie/movie_reg">
+      <p>
+         Name:<font color = "#FF0000">*</font>
+         <input type = "text" name = "person_name" size="21">&nbsp;
+      </p>
+      <p>Gender:&nbsp;&nbsp;&nbsp;
+        <select siz="1" name="gender_id">
+            <option value="0">Select</option>
+            <option value="1">Male</option>
+            <option value="1">Female</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
+        Role:&nbsp;&nbsp;
+        <input type="text" name="person_role" size="22">&nbsp;
+      </p>
+      Start Date: <input type = "date" name = "person_start_date" size = "19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </p>
+      <p>
+        Salary: <input type="number" name="person_salary" size="10"> 
+      </p>
+      <p><input type = "submit" name = "Submit" value = "Submit">
+         <input type = "reset" value = "Reset">
+      </p>
+    </form>
+    <p><font color = "#FF0000">* required fields</font></p>
+      <p><a href="\Movie\index.html">
+    <img border="0" src="goback.JPG" width="41" height="66"></a></p>
+  </body>
+</html>
+
