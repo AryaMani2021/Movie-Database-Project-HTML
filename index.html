@@ -1,58 +1,120 @@
-<html>
+<html lang="en">
 
 <head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Movie Database</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff6699;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border: 6px solid #ff6699;
+            border-radius: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 2px solid #ff6699;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ffccff;
+            font-size: 22px;
+        }
+
+        td {
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff6699;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
 </head>
 
 <body>
-
-<p align="center"><font size="6" color="#FF0000">Movie Database</font></p>
-<p align="center">&nbsp;</p>
-<p align="center">
-<img border="2" src="wall-e-dancing-robot-plays-mp3s.jpg" width="225" height="223"></p>
-<p align="center">&nbsp;</p>
-<center>
-<table border="1" width="45%" id="table1">
-	<tr>
-		<td bgcolor="#00FFFF"><b><font size="5">View (Select)</font></b></td>
-		<td bgcolor="#00FFFF"><b><font size="5">Add (Insert)</font></b></td>
-		<td bgcolor="#00FFFF"><b><font size="5">Modify (Update)</font></b></td>
-		<td bgcolor="#00FFFF"><b><font size="5">Remove (Delete)</font></b></td>
-	</tr>
-	<tr>
-		<td><font size="5"><a href="html\movie_view.html">Movie</a></font></td>
-		<td><font size="5"><a href="html\movie_reg.html">Movie</a></font></td>
-		<td><font size="5"><a href="html\movie_upd.html">Movie</a></font></td>
-		<td><font size="5"><a href="html\movie_del.html">Movie</a></font></td>
-	</tr>
-	<tr>
-		<td height="26"><font size="5"><a href="html\person_view.html">Person</a></font></td>
-		<td height="26"><font size="5"><a href="html\person_reg.html">Person</a></font></td>
-		<td height="26"><font size="5"><a href="html\person_upd.html">Person</a></font></td>
-		<td height="26"><font size="5"><a href="html\person_del.html">Person</a></font></td>
-	</tr>
-	<tr>
-		<td><font size="5"><a href="html\review_view.html">Review</a></font></td>
-		<td><font size="5"><a href="html\review_reg.html">Review</a></font></td>
-		<td><font size="5"><a href="html\review_upd.html">Review</a></font></td>
-		<td><font size="5"><a href="html\review_del.html">Review</a></font></td>
-	</tr>
-</table>
-</center>
-<p align="center">&nbsp;</p>
-<p align="center"><font size="4">Team members:</font></p>
-<p align="center"><font size="4">Tallo, Alexa<br>
-Rupard, Alyssa<br>
-Orow, Luke<br>
-Manimurugan, Aryasree<br>
-Pfeiffer, Chelsea<br>
-Abedin, Samia</font></p>
-<p align="center">&nbsp;</p>
-<p align="center">&nbsp;</p>
-<p align="center">&nbsp;</p>
-<p align="center">&nbsp;</p>
+    <div id="container">
+        <h1>Movie Database</h1>
+        <img src="wall-e-dancing-robot-plays-mp3s.jpg" width="225" height="223" alt="Movie Database Image">
+        <table>
+            <tr>
+                <th>View (Select)</th>
+                <th>Add (Insert)</th>
+                <th>Modify (Update)</th>
+                <th>Remove (Delete)</th>
+            </tr>
+            <tr>
+                <td><a href="html/movie_view.html">Movie</a></td>
+                <td><a href="html/movie_reg.html">Movie</a></td>
+                <td><a href="html/movie_upd.html">Movie</a></td>
+                <td><a href="html/movie_del.html">Movie</a></td>
+            </tr>
+            <tr>
+                <td><a href="html/person_view.html">Person</a></td>
+                <td><a href="html/person_reg.html">Person</a></td>
+                <td><a href="html/person_upd.html">Person</a></td>
+                <td><a href="html/person_del.html">Person</a></td>
+            </tr>
+            <tr>
+                <td><a href="html/review_view.html">Review</a></td>
+                <td><a href="html/review_reg.html">Review</a></td>
+                <td><a href="html/review_upd.html">Review</a></td>
+                <td><a href="html/review_del.html">Review</a></td>
+            </tr>
+        </table>
+        <p>Team members:</p>
+        <p>Tallo, Alexa<br>
+            Rupard, Alyssa<br>
+            Orow, Luke<br>
+            Manimurugan, Aryasree<br>
+            Pfeiffer, Chelsea<br>
+            Abedin, Samia
+        </p>
+    </div>
 </body>
 
 </html>
