@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete a Role</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff0000;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #cc0000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Delete a Role</h2>
+        <form method="get" action="/Movie/role_del">
+            <label for="movie_id">Movie ID:</label>
+            <input type="text" id="movie_id" name="movie_id" size="12">
+            <label for="role_id">Role ID:</label>
+            <input type="text" id="role_id" name="role_id" size="12">
+            <label for="person_id">Person ID:</label>
+            <input type="text" id="person_id" name="person_id" size="12">
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="Actor">Actor</option>
+                <option value="Actress">Actress</option>
+                <option value="Director">Director</option>
+                <option value="Producer">Producer</option>
+            </select>
+            <input type="submit" name="Submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+        <p><a href="\Movie\index.html"><img src="goback.JPG" width="41" height="66" alt="Go back"></a></p>
+    </div>
+</body>
+
+</html>
