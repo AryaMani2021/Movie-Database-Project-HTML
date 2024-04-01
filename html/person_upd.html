@@ -1,38 +1,103 @@
-
+<html>
 <head>
     <title>Movie Registration</title>
-  </head>
-
-<html>
-  <body>
-    <h2 align="left"><font color="#FF0000">Update a Person</font></h2>
-    <form method = "post" action = "/Movie/person_upd">
-      <p>
-         Name:<font color = "#FF0000">*</font>
-         <input type = "text" name = "m_title" size="21">&nbsp;
-      </p>
-      <p>Gender:&nbsp;&nbsp;&nbsp;
-        <select siz="1" name="gender_id">
-            <option value="0">Select</option>
-            <option value="1">Male</option>
-            <option value="1">Female</option>
-        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
-        Role:&nbsp;&nbsp;
-        <input type="text" name="person_role" size="22">&nbsp;
-      </p>
-      Start Date: <input type = "date" name = "person_start_date" size = "19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      </p>
-      <p>
-        Salary: <input type="number" name="person_salary" size="10"> 
-      </p>
-      <p><input type = "submit" name = "Submit" value = "Submit">
-         <input type = "reset" value = "Reset">
-      </p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FF0000;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #FF0000;
+            margin-right: 10px;
+        }
+        input[type="text"],
+        select,
+        input[type="date"],
+        input[type="number"] {
+            width: calc(100% - 25px);
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #FF0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #cc0000;
+        }
+        .go-back img {
+            border: 0;
+            width: 41px;
+            height: 66px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h2>Update a Person</h2>
+    <form method="post" action="/Movie/person_upd">
+        <p>
+            <label for="m_title">Name:<font color="#FF0000">*</font></label>
+            <input type="text" id="m_title" name="m_title" size="21">
+        </p>
+        <p>
+            Gender:
+            <select name="gender_id">
+                <option value="0">Select</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+        </p>
+        <p>
+            Role:
+            <input type="text" name="person_role" size="22">
+        </p>
+        <p>
+            Start Date:
+            <input type="date" name="person_start_date" size="19">
+        </p>
+        <p>
+            Salary:
+            <input type="number" name="person_salary" size="10">
+        </p>
+        <p>
+            <input type="submit" name="Submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
     </form>
-    <p><font color = "#FF0000">* required fields</font></p>
-      <p><a href="\Movie\index.html">
-    <img border="0" src="goback.JPG" width="41" height="66"></a></p>
-  </body>
+    <p><font color="#FF0000">* required fields</font></p>
+    <p><a href="\Movie\index.html" class="go-back">
+        <img src="goback.JPG" alt="Go Back">
+    </a></p>
+</div>
+</body>
 </html>
-
