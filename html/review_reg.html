@@ -1,32 +1,93 @@
-<head>
-    <title>Add a Review</title>
-</head>
-
 <html>
-  <body>
-    <h2><font color="#FF0000">Update a Review</font></h2>
+<head>
+  <title>Update Review</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #FF0000;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #FF0000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #cc0000;
+    }
+    .required {
+      color: #FF0000;
+    }
+    .go-back img {
+      border: 0;
+      width: 41px;
+      height: 66px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Update Review</h2>
     <form method="get" action="/Movie/review_reg">
-      <p>Review ID: <input type="text" name="review_id" size="12"></p>
-      <p>Review Description: <input type="text" name="review_description" size="42"></p>
-      <p>Star Rating:
-        <select name="star_rating">
-          <option value="1">1 Star</option>
-          <option value="2">2 Stars</option>
-          <option value="3">3 Stars</option>
-          <option value="4">4 Stars</option>
-          <option value="5">5 Stars</option>
-        </select>
-      </p>
-      <p>
-        <input type="submit" name="Submit" value="Submit">
-        <input type="reset" value="Reset">
-      </p>
+      <label for="review_id">Review ID <span class="required">*</span></label>
+      <input type="text" id="review_id" name="review_id" required>
+
+      <label for="review_description">Review Description <span class="required">*</span></label>
+      <input type="text" id="review_description" name="review_description" required>
+
+      <label for="star_rating">Star Rating <span class="required">*</span></label>
+      <select id="star_rating" name="star_rating" required>
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+      </select>
+
+      <input type="submit" name="Submit" value="Submit">
+      <input type="reset" value="Reset">
     </form>
-    <p><font color="#FF0000">* required fields</font></p>
-    <p>
+
+    <p class="required">* required fields</p>
+
+    <p class="go-back">
       <a href="\Movie\index.html">
-        <img border="0" src="goback.JPG" width="41" height="66">
+        <img src="goback.JPG" alt="Go Back">
       </a>
     </p>
-  </body>
+  </div>
+</body>
 </html>
